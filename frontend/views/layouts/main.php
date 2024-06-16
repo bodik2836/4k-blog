@@ -11,6 +11,7 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
 AppAsset::register($this);
+Yii::$app->name = "4K-Blog";
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
