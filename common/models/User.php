@@ -6,6 +6,7 @@ use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 
 /**
@@ -29,6 +30,42 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_INACTIVE = 9;
     const STATUS_ACTIVE = 10;
 
+    public $role;
+
+    public function afterFind()
+    {
+        $this->role = $this->getRole();
+    }
+
+    public function getRole()
+    {
+        $roles = Yii::$app->authManager->getRolesByUser($this->getId());
+        
+        return array_key_first($roles);
+    }
+
+    public function getRoles()
+    {
+        $roles = Yii::$app->authManager->getRoles();
+
+        return ArrayHelper::getColumn($roles, 'name');
+    }
+
+    public function getStatuses()
+    {
+        return [
+            self::STATUS_DELETED => 'deleted',
+            self::STATUS_INACTIVE => 'inactive',
+            self::STATUS_ACTIVE => 'active',
+        ];
+    }
+
+    public function getStatusLabel(int $status)
+    {
+        $statuses = $this->getStatuses();
+
+        return $statuses[$status];
+    }
 
     /**
      * {@inheritdoc}
