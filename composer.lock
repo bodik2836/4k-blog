@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2158b2fbf2c2f964ea5d76c3986297c9",
+    "content-hash": "4f75d3671386448b814f0fc79c841b59",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -1355,6 +1355,209 @@
                 }
             ],
             "time": "2024-04-18T09:32:20+00:00"
+        },
+        {
+            "name": "yiisoft/access",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/access.git",
+                "reference": "15bda3b270b99af13fbb735589e133d251d2d126"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/access/zipball/15bda3b270b99af13fbb735589e133d251d2d126",
+                "reference": "15bda3b270b99af13fbb735589e133d251d2d126",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "maglnet/composer-require-checker": "^4.4",
+                "phpunit/phpunit": "^9.6",
+                "rector/rector": "^0.17.0",
+                "roave/infection-static-analysis-plugin": "^1.25",
+                "spatie/phpunit-watcher": "^1.23",
+                "vimeo/psalm": "^4.30|^5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yiisoft\\Access\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "An interface for checking access",
+            "homepage": "https://www.yiiframework.com/",
+            "keywords": [
+                "access",
+                "interface",
+                "rbac",
+                "yii"
+            ],
+            "support": {
+                "chat": "https://t.me/yii3en",
+                "forum": "https://www.yiiframework.com/forum/",
+                "irc": "irc://irc.freenode.net/yii",
+                "issues": "https://github.com/yiisoft/access/issues?state=open",
+                "source": "https://github.com/yiisoft/access",
+                "wiki": "https://www.yiiframework.com/wiki/"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/yiisoft",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/yiisoft",
+                    "type": "opencollective"
+                }
+            ],
+            "time": "2023-08-07T07:09:40+00:00"
+        },
+        {
+            "name": "yiisoft/friendly-exception",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/friendly-exception.git",
+                "reference": "4b4a19edff251791e3c92d4d83435d2716351ff4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/friendly-exception/zipball/4b4a19edff251791e3c92d4d83435d2716351ff4",
+                "reference": "4b4a19edff251791e3c92d4d83435d2716351ff4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.4",
+                "roave/infection-static-analysis-plugin": "^1.5",
+                "spatie/phpunit-watcher": "^1.23",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yiisoft\\FriendlyException\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "An interface for friendlier exception",
+            "homepage": "http://www.yiiframework.com/",
+            "keywords": [
+                "error handling",
+                "exception",
+                "exceptions",
+                "friendly"
+            ],
+            "support": {
+                "forum": "http://www.yiiframework.com/forum/",
+                "irc": "irc://irc.freenode.net/yii",
+                "issues": "https://github.com/yiisoft/friendly-exception/issues?state=open",
+                "source": "https://github.com/yiisoft/friendly-exception",
+                "wiki": "http://www.yiiframework.com/wiki/"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/yiisoft",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/yiisoft",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2021-10-26T21:43:25+00:00"
+        },
+        {
+            "name": "yiisoft/rbac",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/rbac.git",
+                "reference": "49b1fe7a34a644bc8ee34855d15a510c68ffd1bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/rbac/zipball/49b1fe7a34a644bc8ee34855d15a510c68ffd1bb",
+                "reference": "49b1fe7a34a644bc8ee34855d15a510c68ffd1bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "yiisoft/access": "2.0",
+                "yiisoft/friendly-exception": "^1.1"
+            },
+            "require-dev": {
+                "ext-uopz": "*",
+                "maglnet/composer-require-checker": "^4.3",
+                "phpunit/phpunit": "^10.5.2",
+                "rector/rector": "^1.0.0",
+                "roave/infection-static-analysis-plugin": "^1.18",
+                "slope-it/clock-mock": "^0.4.0",
+                "spatie/phpunit-watcher": "^1.23",
+                "vimeo/psalm": "^4.30|^5.3",
+                "yiisoft/di": "^1.2"
+            },
+            "suggest": {
+                "yiisoft/rbac-cycle-db": "For using Cycle as a storage",
+                "yiisoft/rbac-db": "For using Yii Database as a storage",
+                "yiisoft/rbac-php": "For using PHP files as a storage",
+                "yiisoft/rbac-rules-container": "To create rules via Yii Factory"
+            },
+            "type": "library",
+            "extra": {
+                "config-plugin-options": {
+                    "source-directory": "config"
+                },
+                "config-plugin": {
+                    "di": "di.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yiisoft\\Rbac\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Yii Role-Based Access Control",
+            "homepage": "https://www.yiiframework.com/",
+            "keywords": [
+                "rbac",
+                "yii"
+            ],
+            "support": {
+                "chat": "https://t.me/yii3en",
+                "forum": "https://www.yiiframework.com/forum/",
+                "irc": "ircs://irc.libera.chat:6697/yii",
+                "issues": "https://github.com/yiisoft/rbac/issues",
+                "source": "https://github.com/yiisoft/rbac",
+                "wiki": "https://www.yiiframework.com/wiki/"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/yiisoft",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/yiisoft",
+                    "type": "opencollective"
+                }
+            ],
+            "time": "2024-03-07T09:55:18+00:00"
         },
         {
             "name": "yiisoft/yii2",
